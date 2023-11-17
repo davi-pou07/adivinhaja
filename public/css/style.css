@@ -1,0 +1,41 @@
+body{
+    background-color: #000000;
+  padding: 0px;
+  margin: 0px;
+}
+
+#gradient
+{
+ width: 100%;
+ height: 100%;
+ min-height: 800px;
+ padding: 0px;
+ margin: 0px;
+}
+
+#world {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Garante que o canvas esteja sobreposto a outros elementos na página */
+}
+
+
+
+@font-face {
+    font-family: 'MinhaFontePersonalizada';
+    src: url('../fonts/Flavors-Regular.woff') format('woff'), /* adicione aqui todos os formatos que você tem */
+}
+@font-face {
+    font-family: 'MinhaFontePersonalizada2';
+    src: url('../fonts/BaksoSapi.woff') format('woff'), /* adicione aqui todos os formatos que você tem */
+}
+.fonte_infantil {
+    font-family: 'MinhaFontePersonalizada', sans-serif;
+}
+body{
+    font-family: 'MinhaFontePersonalizada2', sans-serif;
+}
