@@ -14,10 +14,189 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="public/css/style.css">
 </head>
+
 <body>
     <canvas class="d-none" id="world"></canvas>
     <div class="container-fluid px-0" id="gradient">
+
+        <div class="modal fade" id="modalInfo" tabindex="-1" aria-labelledby="modalInfoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalInfoLabel">Como funciona o jogo?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                                    aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                                    aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                                    aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                                    aria-label="Slide 8"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
+                                    aria-label="Slide 9"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
+                                    aria-label="Slide 10"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
+                                    aria-label="Slide 11"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2>Sobre o Jogo</h2>
+                                        <p class="text-normal"><b>"Adivinha Já"</b> é um jogo que desafia os
+                                            participantes a aprimora suas habilidades de raciocínio por meio de
+                                            estratégias algorítmicas. É um jogo multplayer que promove a competitividade
+                                            entre os jogadores, proporcionando uma esperiência dinâmica e social,
+                                            incentivando os jogadores a desenvolverem <b>estratégias</b> eficientes para
+                                            alcançar seus objetivos e <b>aprendizado baseado em erros.</b></p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2>Objetivo Principal</h2>
+                                        <p class="text-normal">No universo desafiador do <b>"Adivinha Já"</b>, o
+                                            objetivo principal é <b>adivinhar qual o número aleatório gerado</b> . Os
+                                            jogadores embarcam em uma jornada intelectual, onde é possível fazer
+                                            <b>perguntas</b> e ultilizando estratégias para identificar com precisão
+                                            qual é o <b>número secreto</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2>Jogabilidade</h2>
+                                        <p class="text-normal">Primeiramente informe os apelidos de cada jogadores e
+                                            clique em <b class="bg-primary text-white rounded">Iniciar</b></p>
+                                        <img src="public/img/tuto1.gif" class="img-fluid w-50" alt="">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2>Jogabilidade</h2>
+                                        <p class="text-normal">A partida começa com o jogador 1, para verificar de quem
+                                            é a vez basta observar qual tem uma estrela (⭐).</p>
+                                        <img src="public/img/tuto2.gif" class="img-fluid w-50" alt="">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2>Jogabilidade</h2>
+                                        <p class="text-normal">Para fazer uma pergunta, basta clicar em <b
+                                                class="bg-primary text-white rounded">Fazer Pergunta</b>. Selecione qual
+                                            o <b>tipo de pergunta deseja fazer</b>, informe o <b>valor de X</b> (Em
+                                            alguns caso o valor de Y ou nenhum valor), após isso clique em <b
+                                                class="bg-primary text-white rounded">fazer pergunta</b></p>
+                                        <img src="public/img/tuto3.gif" class="img-fluid w-50" alt="">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2>Jogabilidade</h2>
+                                        <p class="text-normal">Para fazer a sugestão de um número basta clicar em <b
+                                                class="bg-warning text-white rounded">Sugerir Número</b>, adicionar o
+                                            <b>número sugerido</b> e clicar em <b
+                                                class="bg-primary text-white rounded">Fazer sugestão</b>
+                                        </p>
+                                        <img src="public/img/tuto4.gif" class="img-fluid w-50" alt="">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2>Jogabilidade</h2>
+                                        <p class="text-normal">No canto inferior direito irá aparecer a <b>resposta de
+                                                sua pergunta</b>, seguida de um e <b>efeito sonoro</b></p>
+                                        <img src="public/img/tuto5.gif" class="img-fluid w-50" alt="">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2>Jogabilidade</h2>
+                                        <p class="text-normal">Para <b>passar a vez</b>, basta clicar em <b
+                                                class="bg-danger text-white rounded">Passar a Vez</b></p>
+                                        <img src="public/img/tuto6.gif" class="img-fluid w-50" alt="">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2>Como vencer o jogo?</h2>
+                                        <p class="text-normal">Vence o jogo o jogador que <b>adivinhar o número
+                                                secreto</b> ou <b>obter 100 pontos primeiro</b></p>
+                                        <div class="row justify-content-center">
+                                            <div class="col-8">
+                                                <ol class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between">
+                                                        <p>Fazer pergunta correta</p>
+                                                        <p class="text-success">+5 pontos</p>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between">
+                                                        <p>Fazer pergunta incorreta</p>
+                                                        <p class="text-danger">-3 pontos</p>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between">
+                                                        <p>Passar a vez</p>
+                                                        <p class="text-danger">-1 ponto</p>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between">
+                                                        <p>Errar a sugestão de um número</p>
+                                                        <p class="text-danger">-15 pontos</p>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between">
+                                                        <p>Acertar a sugestão de um número</p>
+                                                        <p class="text-success">+100 pontos</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2>Resultados</h2>
+                                        <p class="text-normal">Para <b>acompanhar resultados</b>, bastar rolar a página
+                                            para baixo. Você poderá acompanhar quantidade de perguntas, erros e acertos.
+                                            Como também verificar quais <b>perguntas que já foram feitas</b> e seus
+                                            resultados!</p>
+                                        <img src="public/img/tuto7.gif" class="img-fluid w-50" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="text-center pb-3 mb-3">
+                                        <h2 class="text-success">Desejo bom jogo!</h2>
+
+                                        <img src="public/img/gg.png" class="img-fluid w-50" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container py-5">
+            <div class="text-end my-3"><button class="btn btn-sm btn-light" data-bs-toggle="modal"
+                    data-bs-target="#modalInfo"><img class="img-fluid" width="15px" src="/public/img/info.png"
+                        alt=""></button></div>
             <h1 class="text-center text-white fonte_infantil">Adivinha Já</h1>
             <div class="card my-4 animate__animated animate__slow " id="div-cadastro">
                 <div class="card-header">
@@ -347,4 +526,5 @@
     <script src="public/js/confetti.js"></script>
     <script src="public/js/script.js"></script>
 </body>
+
 </html>

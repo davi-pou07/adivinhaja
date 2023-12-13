@@ -43,13 +43,13 @@ class Jogo {
     addErroTentativa() {
         new Audio('./public/audio/erro-tentativa.mp3').play()
         this.getJogadorAtual().tentativas++
-        this.getJogadorAtual().score -= 10
+        this.getJogadorAtual().score -= 15
     }
 
     addAcertoTentativa() {
         new Audio('./public/audio/success.mp3').play()
         this.getJogadorAtual().tentativas++
-        this.getJogadorAtual().score += 30
+        this.getJogadorAtual().score += 100
         this.getJogadorAtual().descobertas++
         this.numeroSecreto = this.gerarnumeroSecreto()
     }
